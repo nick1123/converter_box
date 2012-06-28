@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Converter Box</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+
+<div class="topbar" data-scrollspy="scrollspy">
+      <div class="topbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Converter Box</a>
+        </div>
+      </div>
+    </div>
+
+
+ <div class="container">
+    <div class="content">
+
+	  <div class="span6">
+	      <h2>Convert Ruby Hash to YAML</h2>
+	        <form action='/' method='post'>
+	        <textarea class="field span12" name="ruby_hash" rows="20" placeholder="Enter a short synopsis"><%= @ruby_hash %></textarea>
+			 <input class="btn btn-primary" type="submit" name="login" value="Convert it!" />
+			</form>
+	    </div>
+
+<% if @output %>
+		<h2> Yamlified Hash</h2>
+<pre><%= @output %>
+		</pre>
+		
+		<% end%>
+    </div>
+  </div>
+
+</body>
+</html>
