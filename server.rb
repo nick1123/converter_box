@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'yaml'
 require 'base64'
+require 'json'
 
 get '/' do
   @ruby_hash = ''
@@ -18,6 +19,12 @@ post '/' do
   if @ruby_hash
     eval("@output_body = #{@ruby_hash}")
     @output_body = @output_body.to_yaml
+    @output_title = "Yamlified Hash"
+  end
+
+  @json_hash = params[:json_hash]
+  if @json_hash
+    @output_body = JSON.parse(@json_hash).to_yaml
     @output_title = "Yamlified Hash"
   end
 

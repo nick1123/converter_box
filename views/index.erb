@@ -36,6 +36,15 @@
 
 
       <div class="span8">
+        <h2>Convert JSON Hash to YAML</h2>
+          <form action='/' method='post'>
+          <textarea class="field span12" name="json_hash" rows="20" placeholder=""><%= @ruby_hash %></textarea>
+       <input class="btn btn-primary" type="submit" name="login" value="Convert it!" />
+      </form>
+      </div>
+
+
+      <div class="span8">
         <h2>Base64 Strict Encode</h2>
           <form action='/' method='post'>
           <input class="field span12" name="string_to_strict64_encode" value="<%= @string_to_strict64_encode %>">
