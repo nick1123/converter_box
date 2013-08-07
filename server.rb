@@ -3,6 +3,8 @@ require 'yaml'
 require 'base64'
 require 'json'
 
+set :bind, '0.0.0.0'
+
 get '/' do
   @ruby_hash = ''
   @output_title = nil
